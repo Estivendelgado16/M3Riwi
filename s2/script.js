@@ -126,20 +126,23 @@ function eliminiarID() {
 
 }
 
-for (const id of idsProductos) {
-    console.log(id)
-}
+
 
 const categoriaMap = new Map();
 
-for (const producto of productos) {
-  const  { categoria, nombre} = producto;
-
-  if(!categoriaMap.has(categoria)) {
-    categoriaMap.set(categoria, []);
+productos.forEach(item => {
+  if (!categoriaMap.has(item.categoria)) {
+    categoriaMap.set(item.categoria, []);
   }
 
-  categoriaMap.get(categoria).push(nombre, categoria)
-  console.log(producto)
+  categoriaMap.get(item.categoria).push(item.nombre)
+})
+
+console.log(categoriaMap)
+
+for (const [categoria, nombres] of categoriaMap) {
+  console.log(`Categoria: ${categoria} - Productos: ${nombres.join(", ")}`);
 }
+
+
 
