@@ -33,8 +33,6 @@ function addProduct(){
         return; 
     }
 
-
-
     const newProduct = {
         name: productValue,
         mount: Number(priceValue),
@@ -44,6 +42,8 @@ function addProduct(){
     productsList.push(newProduct);
 
     form.reset();   
+    
+
     
     console.log(productsList);
 }

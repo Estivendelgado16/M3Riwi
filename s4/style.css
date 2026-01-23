@@ -1,0 +1,34 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+    gap: 10px;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    background-color: aqua;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.tarject{
+    background-color: aqua;
+    
+}
+
+.listProducts{
+    display: grid;
+    background-color: brown;
+    grid-template-columns: 3fr 3fr;
+
+}
